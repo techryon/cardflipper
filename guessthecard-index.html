@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
-  <link href="./Resources/styles/style-index.css" type="text/css" rel="stylesheet">
-  <script type="text/javascript" src="Resources/scripts/script-index.js"> </script>
+  <title>Guess the Card Game</title>
+  <!--The below is the css file for styling of the page-->
+  <link href="./res/styles/style-index.css" type="text/css" rel="stylesheet">
+  
 </head>
 <body>
     
-    <h1>John Peter</h1>
-    <button id="myBtn">Try it</button>
-    <p>I'm learning to code with a help from a friend:</p>
-    <ul>
-      <li>Learn to code</li>
-      <li>Start a company</li>
-      <li>Help the world</li>
+    <h1>Guess the Card</h1> <!--Heading with my name-->
+    
+    <p>I'm learning to code with a help from a friend: </br>
+       The rules of the game are listed below </p> <!--Sample paragraph-->
+    <ul> <!--A sample list-->
+      <li>When the page is loaded, it shows back of the card</li>
+      <li>Click on the cards, it will show a random card from the deck</li>
+      <li>If both matches, you will see "You Win!!!"</li>
+      <li>If both doesn't match, hit reset to start again</li>
     </ul>
-    <p>This is one of my favorite websites: <a href="https://www.google.com/" target="_blank">Google</a></p>
-
-
-    <div class="card-area">
-        <img src="./Resources/images/card-background.png" alt="Background of a Deck of Cards">
-            
-        <img src="./Resources/images/card-background.png" alt="Background of a Deck of Cards">
-        
+    
+    <!--This is the div where the images will be displayed during the game-->
+    <div id = 'mainDiv'>        
+  
 
     </div>
-</body>
+
+    <!--The below is the script file to call the functions of the program-->
+    <script type="text/javascript" src="./res/scripts/script-index.js"> </script>
+
+  </body>
 </html>
