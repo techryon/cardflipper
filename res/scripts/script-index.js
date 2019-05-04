@@ -1,23 +1,47 @@
+//AddEventListener to DOMContentLoaded, so the image waits to load
+//after the page is loaded
 document.addEventListener("DOMContentLoaded", function(event) {
-	add_google_logo();
-	add_google_logo();
+	onload_image();
+  
 });
 
+var cardOne = document.getElementById("cardOne");
+cardOne.onclick = function() {
+  changeImage(cardOne);
+}
 
-function add_google_logo() {
-  var src = "./res/images/card-background.png";
-  show_image(src, 200,271, "Back of Card");
+var cardTwo = document.getElementById("cardTwo");
+cardTwo.onclick = function() {
+  changeImage(cardTwo);
 }
 
 
-function show_image(src, width, height, alt) {
-  var img = document.createElement("img");
+var reset = document.getElementById("reset");
+reset.onclick = function() {
+  onload_image();
+}
+
+//Function to load both the default images. Looping it so it loads the same image twice
+//This function gets the image using Id and adds the source attributes 
+function onload_image() {
+  for(var defaultImage=1; defaultImage<=2; defaultImage++){
+    var src = "./res/images/card-background.png";
+    var img = document.getElementById("displayingImage" + defaultImage);
+    img.src = src;
+    
+  }
+}
+
+
+
+
+
+//Function to flip the card and display the changed image.
+//This function check which parent tag is clicked and change image on its child
+function changeImage(parent){
+  var src = "./res/images/front-Spade-A.png";
+  var img = parent.children[0];
   img.src = src;
-  img.width = width;
-  img.height = height;
-  img.alt = alt;
-  var test = document.getElementById("mainDiv");
-  test.appendChild(img);
-}
 
+}
 
