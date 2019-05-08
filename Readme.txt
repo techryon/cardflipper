@@ -1,3 +1,5 @@
+This is jus the card flipper, the game will be in different repository
+
 This is a guess me card game
 
 # Requirements
